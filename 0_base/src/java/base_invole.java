@@ -13,6 +13,6 @@ import java.io.IOException;
 public class base_invole {
     public static void main(String[] args) throws IOException {
         GroovyShell shell = new GroovyShell();
-        System.out.println(shell.evaluate(new File("D:\\groovy_sample\\0_base\\src\\base.groovy")).toString());
+        System.out.println(shell.evaluate(new File("0_base/src/groovy/base.groovy")).toString());
     }
 }
