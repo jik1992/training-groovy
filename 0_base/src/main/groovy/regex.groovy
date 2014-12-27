@@ -1,3 +1,5 @@
+package groovy
+
 def text=""
 def map = [:];
 new File("test.txt").eachLine { text += it };

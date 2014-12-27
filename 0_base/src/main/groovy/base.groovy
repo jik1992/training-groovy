@@ -1,3 +1,5 @@
+import groovy.util.logging.Log
+
 println "hello wolrd\n"
 /*
 0x00groovy 将自动为我们导入包类
