@@ -4,29 +4,44 @@ apply plugin: 'codenarc'
 
 
 version = '0.1.1'
-group=''
+group = ''
 
-jar{
-
+jar {
+    manifest {
+//        attributes 'Main-Class': 'net.petrikainulainen.gradle.HelloWorld'
+    }
 }
 
 repositories {
-    maven{
+    maven {
         url 'http://maven.oschina.net/content/groups/public/'
     }
-    mavenLocal()
+//    mavenLocal()
 //    mavenCentral()
 }
 
 dependencies {
-    compile 'org.codehaus.groovy:groovy-all:2.1.6'
+    compile(
+            ['org.codehaus.groovy:groovy-all:2.1.6'],
+            ["mysql:mysql-connector-java:5.1.24"],
+            ["org.apache.ivy:ivy:2.4.0"],
+            ["log4j:log4j:1.2.17"],
+            ["org.slf4j:slf4j-log4j12:1.7.7"],
+            ["org.codehaus.gpars:gpars:1.2.1"]
+    )
     testCompile 'junit:junit:4.10'
     testCompile 'org.mockito:mockito-all:1.9.5'
 }
 
-task info <<{
+task info << {
     println 'Name $project.Name'
     println 'Dependences'
-    project.configurations.testCompile.allDependencies.each {println it}
+    project.configurations.testCompile.allDependencies.each { println it }
+}
+
+
+task copyJars(type: Copy) {
+    from configurations.runtime
+    into 'lib' // 目标位置
 }
 

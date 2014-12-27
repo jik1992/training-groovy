@@ -1,2 +1,3 @@
 rootProject.name = 'groovy_sample'
 
+include '0_base', '1_spock', '2_JSON','3_DataBase','4_gpars'
