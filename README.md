@@ -8,3 +8,4 @@ learning groovy/spock/gpars
  2. Json
  3. db link
  4. current model
+ 5. http

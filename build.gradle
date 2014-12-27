@@ -27,7 +27,8 @@ dependencies {
             ["org.apache.ivy:ivy:2.4.0"],
             ["log4j:log4j:1.2.17"],
             ["org.slf4j:slf4j-log4j12:1.7.7"],
-            ["org.codehaus.gpars:gpars:1.2.1"]
+            ["org.codehaus.gpars:gpars:1.2.1"],
+            ["org.codehaus.groovy.modules.http-builder:http-builder:0.7.2"]
     )
     testCompile 'junit:junit:4.10'
     testCompile 'org.mockito:mockito-all:1.9.5'
