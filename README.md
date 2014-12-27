@@ -1,9 +1,10 @@
 groovy_sample
 =============
 
-这门语言结合了很多语言的优势,取其糟粕,nice good
+learning groovy/spock/gpars
 
-
-learning groovy/spock/gradle
-
- 1. 基础语法
+ 0. basic language
+ 1. BDD test
+ 2. Json
+ 3. db link
+ 4. current model
